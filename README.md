@@ -1,5 +1,13 @@
 # shyamhemamalini-com
 
+[![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-D97757?style=flat-square)](https://claude.com)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=000000)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![React Router](https://img.shields.io/badge/React%20Router-7-CA4245?style=flat-square&logo=reactrouter&logoColor=white)](https://reactrouter.com)
+
+Built with Claude Sonnet 5 — Anthropic's model, January 2026 knowledge, infinite patience for revisions.
+
 React 18 + Vite 7 + Tailwind CSS 3 single-page app with three client-side routes.
 
 ## Stack
@@ -47,10 +55,4 @@ Node ≥20.19 (see `.nvmrc`) — required by Vite 7.
 ## Deployment
 
 Static build (`dist/`) deployed via Cloudflare Pages, connected to this repo's `main` branch.
-
----
-
-[![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-D97757?style=flat-square)](https://claude.com)
-
-Built with Claude Sonnet 5 — Anthropic's model, January 2026 knowledge, infinite patience for revisions.
 
