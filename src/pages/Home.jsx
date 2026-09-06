@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Camera, Github, Linkedin, Mail } from "lucide-react";
 import ProjectCard from "../components/ProjectCard";
@@ -11,6 +12,42 @@ const PROJECTS_BY_YEAR = [
   ...PROJECTS.filter((p) => !p.pinned).sort((a, b) => Number(b.period) - Number(a.period)),
 ];
 
+const [FIRST_NAME, ...LAST_NAME_PARTS] = RESUME_DATA.profile.name.split(" ");
+const LAST_NAME = LAST_NAME_PARTS.join(" ");
+
+// Automatic re-trigger interval — every 10s, unless a hover/press trigger
+// resets the clock first. Each play itself runs a 5s animation (see the
+// chroma-red/chroma-yellow keyframes in tailwind.config.js).
+const GLITCH_INTERVAL_MS = 10000;
+
+// The real (white/black) text sits in its own z-10 stacking context so it
+// always paints above the two absolutely-positioned ghost layers, which
+// would otherwise win by default (positioned elements paint over static
+// ones regardless of DOM order). Ghost direction comes from the --gx/--gy
+// custom properties set on the ancestor <h1> — see Home() below.
+//
+// `playKey` changing remounts the ghost spans (via React `key`), which
+// restarts their CSS animation from 0% — the standard way to replay a
+// finished (or interrupt a running) CSS animation on demand.
+function GlitchName({ text, className = "", playKey }) {
+  const ghostBase = "absolute inset-0 pointer-events-none select-none";
+  return (
+    <span className={`relative inline-block whitespace-nowrap ${className}`}>
+      <span className="relative z-10">{text}</span>
+      <span key={`r${playKey}`} aria-hidden="true" className={`${ghostBase} text-tue animate-chroma-red`}>
+        {text}
+      </span>
+      <span
+        key={`y${playKey}`}
+        aria-hidden="true"
+        className={`${ghostBase} text-sunflower-400 animate-chroma-yellow`}
+      >
+        {text}
+      </span>
+    </span>
+  );
+}
+
 const ABOUT_ITEMS = [
   "Computational physics engineer",
   "Finishing a PhD at TU/e on turbulent iron powder combustion",
@@ -20,19 +57,58 @@ const ABOUT_ITEMS = [
     <span className="text-tue">scientific software development</span>, and{" "}
     <span className="text-tue">thermal &amp; flow engineering</span> roles
   </>,
-  "Hobbyist photographer",
-  "Tinkering with home networks on the side",
+  <>
+    Hobbyist <span className="text-sunflower-400">photographer</span>
+  </>,
+  <>
+    Tinkering with <span className="text-green-500">home networks</span> on the side
+  </>,
 ];
 
 export default function Home() {
+  const [angle, setAngle] = useState(() => Math.random() * Math.PI * 2);
+  const [playKey, setPlayKey] = useState(0);
+  const timerRef = useRef(null);
+
+  const scheduleNext = () => {
+    clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(playGlitch, GLITCH_INTERVAL_MS);
+  };
+
+  const playGlitch = () => {
+    setAngle(Math.random() * Math.PI * 2);
+    setPlayKey((k) => k + 1);
+    scheduleNext();
+  };
+
+  useEffect(() => {
+    scheduleNext();
+    return () => clearTimeout(timerRef.current);
+  }, []);
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
-      <header className="text-center mb-20">
-        <h1 className="font-serif text-3xl md:text-4xl tracking-tight text-black dark:text-white">
-          {RESUME_DATA.profile.name}
+      <header className="text-center mb-12">
+        <h1
+          className="font-space-mono lowercase leading-tight tracking-tight text-black dark:text-white"
+          style={{ "--gx": Math.cos(angle), "--gy": Math.sin(angle) }}
+          onMouseEnter={playGlitch}
+          onTouchStart={playGlitch}
+        >
+          <GlitchName
+            text={FIRST_NAME}
+            className="text-6xl sm:text-7xl md:text-8xl -translate-x-[1ch]"
+            playKey={playKey}
+          />
+          <br />
+          <GlitchName
+            text={LAST_NAME}
+            className="text-5xl sm:text-6xl md:text-7xl translate-x-[1ch]"
+            playKey={playKey}
+          />
         </h1>
 
-        <div className="mt-6 flex items-center justify-center gap-5">
+        <div className="mt-10 flex items-center justify-center gap-5">
           <a
             href={mailtoHref()}
             aria-label="Email"

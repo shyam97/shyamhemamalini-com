@@ -56,7 +56,7 @@ export default function Nav({ theme, onToggleTheme }) {
               href={HOMELAB_URL}
               aria-label="Homelab"
               title="Homelab"
-              className="p-2 text-stone-400 dark:text-stone-500 opacity-40 hover:opacity-100 hover:text-stone-900 dark:hover:text-white transition-all"
+              className="p-2 text-green-500 opacity-40 hover:opacity-100 transition-all"
             >
               <Server size={14} />
             </a>

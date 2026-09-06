@@ -4,7 +4,16 @@ import SectionHeader from "../components/SectionHeader";
 import TimelineCard from "../components/TimelineCard";
 import { RESUME_DATA } from "../data/resume";
 
-const { profile, summary, expertise, timeline, publications, ancillary } = RESUME_DATA;
+const { profile, summary, expertise, timeline, publications, ancillary, languagesSpoken } =
+  RESUME_DATA;
+
+function Label({ children }) {
+  return (
+    <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-stone-400 dark:text-stone-600 mr-2">
+      {children}
+    </span>
+  );
+}
 
 export default function CV() {
   const { hash } = useLocation();
@@ -13,18 +22,24 @@ export default function CV() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-14 md:py-20">
       {/* Header */}
-      <header className="mb-14 flex flex-col-reverse md:flex-row items-start gap-8">
+      <header className="mb-14 flex flex-col-reverse md:flex-row items-start gap-4 md:gap-8">
         <div className="flex-1">
           <h1 className="font-ubuntu text-3xl md:text-4xl font-normal tracking-tight text-stone-900 dark:text-white">
             {profile.name}
           </h1>
           <p className="text-lg text-stone-700 dark:text-stone-300 mt-2">{profile.title}</p>
-          <p className="font-ubuntu-mono text-sm uppercase text-stone-400 dark:text-stone-500 mt-1.5">
+          <p className="font-mono text-xs uppercase tracking-[0.15em] text-stone-400 dark:text-stone-600 mt-1.5">
             {profile.subtitle}
           </p>
 
-          <p className="mt-4 text-sm text-stone-500 dark:text-stone-400">{profile.nationality}</p>
-          <p className="text-sm text-stone-500 dark:text-stone-400">{profile.availability}</p>
+          <p className="mt-4 text-sm">
+            <Label>Nationality</Label>
+            <span className="text-stone-600 dark:text-stone-300">{profile.nationality}</span>
+          </p>
+          <p className="text-sm">
+            <Label>Availability</Label>
+            <span className="text-stone-600 dark:text-stone-300">{profile.availability}</span>
+          </p>
 
           <a
             href={profile.cvPdf}
@@ -38,7 +53,7 @@ export default function CV() {
         <img
           src={profile.photo}
           alt={profile.name}
-          className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border border-stone-200 dark:border-stone-800"
+          className="w-32 h-32 md:w-36 md:h-36 rounded-full object-cover border border-stone-200 dark:border-stone-800"
         />
       </header>
 
@@ -53,9 +68,7 @@ export default function CV() {
           <div className="space-y-4">
             {expertise.map((group) => (
               <p key={group.label} className="text-sm leading-relaxed">
-                <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-stone-400 dark:text-stone-600 mr-2">
-                  {group.label}
-                </span>
+                <Label>{group.label}</Label>
                 <span className="text-stone-600 dark:text-stone-300">
                   {group.items.join(", ")}
                 </span>
@@ -140,6 +153,22 @@ export default function CV() {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section>
+          <SectionHeader index="05" title="Languages Spoken" />
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {languagesSpoken.map((l) => (
+              <p key={l.language} className="text-sm">
+                <span className="text-stone-800 dark:text-stone-100 font-medium">
+                  {l.language}
+                </span>{" "}
+                <span className="font-mono text-xs text-stone-400 dark:text-stone-500">
+                  — {l.level}
+                </span>
+              </p>
+            ))}
+          </div>
         </section>
       </div>
     </div>

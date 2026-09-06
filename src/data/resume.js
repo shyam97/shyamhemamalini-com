@@ -14,12 +14,12 @@ export const RESUME_DATA = {
     github: "https://github.com/shyam97",
     linkedin: "https://linkedin.com/in/shyamhemamalini",
     unsplash: "https://unsplash.com/@thezenoeffect",
-    nationality: "Nationality: Dutch",
-    availability: "Availability: September 2026",
+    nationality: "Dutch",
+    availability: "September 2026",
     cvPdf: "/Shyam_Hemamalini_CV.pdf",
   },
   summary:
-    "A computational engineer specializing in scientific software development for fluid and thermal systems — designing, testing, and validating high-performance numerical solvers from first-principles physics through to production-quality, version-controlled code. Equally comfortable applying that same foundation to mechanical design, process engineering, and industrial R&D. Adept at owning a problem end-to-end: solver architecture, HPC implementation, data analysis, and clear technical communication.",
+    "An expert scientific communicator and presenter, and a computational engineer specializing in scientific software development for fluid and thermal systems — designing, testing, and validating high-performance numerical solvers from first-principles physics through to production-quality, version-controlled code. Equally comfortable applying that same foundation to mechanical design, process engineering, and industrial R&D. Adept at owning a problem end-to-end: solver architecture, HPC implementation, data analysis, and clear technical communication.",
   expertise: [
     {
       label: "Research Interests",
@@ -74,7 +74,7 @@ export const RESUME_DATA = {
       role: "PhD in Mechanical Engineering",
       org: "Technische Universiteit Eindhoven",
       location: "Eindhoven, Netherlands",
-      period: "Jul 2022 — Aug 2026",
+      period: "Jul 2022 — Oct 2026",
       shortDesc:
         "Building and validating a hybrid multiphysics solver — DNS and LES — for turbulent iron powder combustion, developed as tested, version-controlled software with international collaborators.",
       meta: [
@@ -275,6 +275,12 @@ export const RESUME_DATA = {
   ],
   ancillary: [
     {
+      id: "event-photographer",
+      role: "Event Photographer",
+      context: "Part-time photographer for official and unofficial events",
+      period: "Ongoing",
+    },
+    {
       id: "ta1",
       role: "Teaching Assistant",
       context: "4RC30 — Introduction to Computational Fluid Dynamics, TU Eindhoven",
@@ -293,5 +299,12 @@ export const RESUME_DATA = {
       context: "High-school physics and chemistry, Abdul Kalam Institute for IIT-JEE, Coimbatore, India",
       period: "2018 — 2019",
     },
+  ],
+  languagesSpoken: [
+    { language: "English", level: "Fluent" },
+    { language: "Dutch", level: "A2+" },
+    { language: "German", level: "A2" },
+    { language: "French", level: "Beginner" },
+    { language: "Tamil", level: "Native" },
   ],
 };
