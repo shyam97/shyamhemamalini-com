@@ -25,7 +25,7 @@ export default function TimelineCard({ item, forceOpen = false }) {
         <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold text-stone-900 dark:text-white">{item.role}</h3>
-            <span className="font-mono text-xs text-stone-400 dark:text-stone-500 whitespace-nowrap">
+            <span className="font-mono text-xs uppercase text-stone-400 dark:text-stone-500 whitespace-nowrap">
               {item.period}
             </span>
           </div>
@@ -34,7 +34,7 @@ export default function TimelineCard({ item, forceOpen = false }) {
             {item.location ? ` — ${item.location}` : ""}
           </p>
           {item.keywords?.length > 0 && (
-            <p className="font-mono text-xs text-stone-400 dark:text-stone-500 mt-2.5">
+            <p className="font-mono text-xs uppercase text-stone-400 dark:text-stone-500 mt-2.5">
               {item.keywords.join("  ·  ")}
             </p>
           )}

@@ -19,7 +19,7 @@ export default function CV() {
             {profile.name}
           </h1>
           <p className="text-lg text-stone-700 dark:text-stone-300 mt-2">{profile.title}</p>
-          <p className="font-ubuntu-mono text-xs text-stone-400 dark:text-stone-500 mt-1.5">
+          <p className="font-ubuntu-mono text-sm uppercase text-stone-400 dark:text-stone-500 mt-1.5">
             {profile.subtitle}
           </p>
 
