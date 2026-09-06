@@ -9,7 +9,10 @@ export const RESUME_DATA = {
   profile: {
     name: "Shyam Hemamalini",
     title: "Scientific Software Engineer",
-    subtitle: "CFD · Thermal & Flow Engineering · Numerical Modelling · HPC",
+    // Rendered as two fixed lines (not wrapped at whatever point the
+    // viewport happens to break it), so this is an array of lines, not
+    // a single string.
+    subtitle: ["CFD · Thermal & Flow Engineering", "Multiphysics Modelling · HPC"],
     photo: "/profile2.jpg",
     github: "https://github.com/shyam97",
     linkedin: "https://linkedin.com/in/shyamhemamalini",
@@ -18,8 +21,12 @@ export const RESUME_DATA = {
     availability: "September 2026",
     cvPdf: "/Shyam_Hemamalini_CV.pdf",
   },
-  summary:
-    "An expert scientific communicator and presenter, and a computational engineer specializing in scientific software development for fluid and thermal systems — designing, testing, and validating high-performance numerical solvers from first-principles physics through to production-quality, version-controlled code. Equally comfortable applying that same foundation to mechanical design, process engineering, and industrial R&D. Adept at owning a problem end-to-end: solver architecture, HPC implementation, data analysis, and clear technical communication.",
+  // Array of paragraphs (rendered with a gap between each), not one block.
+  summary: [
+    "A computational engineer specializing in scientific software development for fluid and thermal systems — designing, testing, and validating high-performance numerical solvers from first-principles physics through to production-quality, version-controlled code. Equally comfortable applying that same foundation to mechanical design, process engineering, and industrial R&D.",
+    "Adept at owning a problem end-to-end: solver architecture, HPC implementation, data analysis, and technical communication. Expert in scientific visualization for CFD, mechanical design, software architecture, and multiphysics modelling.",
+    "Passionate about open-source software, reproducible research, and collaborative development.",
+  ],
   expertise: [
     {
       label: "Research Interests",

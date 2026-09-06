@@ -29,7 +29,11 @@ export default function CV() {
           </h1>
           <p className="text-lg text-stone-700 dark:text-stone-300 mt-2">{profile.title}</p>
           <p className="font-mono text-xs uppercase tracking-[0.15em] text-stone-400 dark:text-stone-600 mt-1.5">
-            {profile.subtitle}
+            {profile.subtitle.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </p>
 
           <p className="mt-4 text-sm">
@@ -58,8 +62,12 @@ export default function CV() {
       </header>
 
       {/* Summary */}
-      <section className="mb-14">
-        <p className="text-stone-600 dark:text-stone-300 leading-relaxed">{summary}</p>
+      <section className="mb-14 space-y-4">
+        {summary.map((paragraph, i) => (
+          <p key={i} className="text-stone-600 dark:text-stone-300 leading-relaxed">
+            {paragraph}
+          </p>
+        ))}
       </section>
 
       <div className="space-y-14">
@@ -157,16 +165,19 @@ export default function CV() {
 
         <section>
           <SectionHeader index="05" title="Languages Spoken" />
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
+          <div className="flex flex-wrap justify-center gap-y-4">
             {languagesSpoken.map((l) => (
-              <p key={l.language} className="text-sm">
-                <span className="text-stone-800 dark:text-stone-100 font-medium">
+              <div
+                key={l.language}
+                className="basis-1/3 sm:basis-1/5 flex flex-col items-center text-center"
+              >
+                <span className="text-sm text-stone-800 dark:text-stone-100 font-medium">
                   {l.language}
-                </span>{" "}
-                <span className="font-mono text-xs text-stone-400 dark:text-stone-500">
-                  — {l.level}
                 </span>
-              </p>
+                <span className="font-mono text-xs text-stone-400 dark:text-stone-500 mt-0.5">
+                  {l.level}
+                </span>
+              </div>
             ))}
           </div>
         </section>

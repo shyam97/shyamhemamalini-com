@@ -1,8 +1,11 @@
 /**
- * Photo gallery content. Placeholder entries — swap `src` for your own
- * images (e.g. add files under public/photos/ and point src at them).
- * `orientation` is "portrait" (2:3) or "landscape" (3:2) — keep every
- * photo to one of these two ratios so the waterfall layout stays even.
+ * Photo gallery content. Placeholder entries — to swap in real photos, drop
+ * files into public/photos/ (already created) and point `src` at them, e.g.
+ * `/photos/canal-frost.jpg`. `orientation` is "portrait" (2:3) or
+ * "landscape" (3:2) — keep every photo to one of these two ratios so the
+ * grid tiles stay a consistent shape. Display order is randomized at
+ * render time (see Photography.jsx) — the order here is just for editing
+ * convenience, not what visitors see.
  */
 export const PHOTOS = [
   {
@@ -76,5 +79,13 @@ export const PHOTOS = [
     caption: "Crevasse detail on the glacier's north face",
     location: "Saas-Fee, CH",
     date: "Aug 2024",
+  },
+  {
+    id: "p10",
+    src: "https://picsum.photos/seed/tue-10/1200/800",
+    orientation: "landscape",
+    caption: "Boat lights streaked across a canal at night",
+    location: "Amsterdam, NL",
+    date: "Jul 2024",
   },
 ];

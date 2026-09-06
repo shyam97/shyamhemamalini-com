@@ -36,7 +36,7 @@ export const PROJECTS = [
     description: "Ignition delay and flame structure in a turbulent mixing layer.",
     keywords: ["DNS", "Mixing Layer"],
     cvAnchor: "tue-phd",
-    background: "https://picsum.photos/seed/proj-mixing-layer/800/800",
+    background: "/projects/mixinglayer.jpg",
   },
   {
     id: "jhc-burner",

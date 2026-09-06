@@ -4,7 +4,7 @@ export default function PhotoTile({ photo, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="group relative block w-full mb-4 break-inside-avoid overflow-hidden rounded-2xl bg-stone-100"
+      className="group relative block w-full overflow-hidden rounded-2xl bg-stone-100"
       style={{ aspectRatio: ratio }}
     >
       <img
