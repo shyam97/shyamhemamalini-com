@@ -36,6 +36,9 @@ export default function Nav({ theme, onToggleTheme }) {
                 if (isActive && link.to === "/cv") {
                   return "text-tue transition-colors";
                 }
+                if (isActive && link.to === "/photography") {
+                  return "text-sunflower-400 transition-colors";
+                }
                 return `transition-colors ${
                   isActive
                     ? "text-stone-900 dark:text-white"

@@ -6,6 +6,9 @@ import { RESUME_DATA } from "../data/resume";
 import { PHOTOS } from "../data/photos";
 import { mailtoHref } from "../lib/email";
 
+const [FIRST_NAME, ...LAST_NAME_PARTS] = RESUME_DATA.profile.name.split(" ");
+const LAST_NAME = LAST_NAME_PARTS.join(" ");
+
 export default function Photography() {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -13,7 +16,7 @@ export default function Photography() {
     <div>
       <header className="max-w-3xl mx-auto px-6 pt-16 pb-12 text-center">
         <h1 className="font-bartle text-4xl sm:text-5xl md:text-6xl tracking-tight text-sunflower-400">
-          {RESUME_DATA.profile.name}
+          {FIRST_NAME} <span className="text-2xl sm:text-5xl md:text-6xl">{LAST_NAME}</span>
         </h1>
         <p className="font-oswald text-lg text-stone-500 dark:text-stone-400 mt-3">
           Hobbyist Photographer
