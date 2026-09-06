@@ -23,6 +23,9 @@ export default function CV() {
             {profile.subtitle}
           </p>
 
+          <p className="mt-4 text-sm text-stone-500 dark:text-stone-400">{profile.nationality}</p>
+          <p className="text-sm text-stone-500 dark:text-stone-400">{profile.availability}</p>
+
           <a
             href={profile.cvPdf}
             download
@@ -30,10 +33,6 @@ export default function CV() {
           >
             <Download size={14} /> Download CV
           </a>
-
-          <p className="mt-4 text-sm text-stone-500 dark:text-stone-400">
-            {profile.nationality} &middot; {profile.availability}
-          </p>
         </div>
 
         <img

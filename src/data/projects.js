@@ -86,7 +86,7 @@ export const PROJECTS = [
     description: "Analytical models for pump-free cooling and solar heat loss.",
     keywords: ["Thermosiphon", "SolidWorks"],
     cvAnchor: "psg-jrf",
-    background: "https://picsum.photos/seed/proj-thermosiphon/800/800",
+    background: "/projects/naturalconvection.jpg",
   },
   {
     id: "folding-bicycle",
