@@ -6,8 +6,11 @@ export default {
       fontFamily: {
         sans: ['"Fira Sans"', "system-ui", "sans-serif"],
         mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
-        display: ['"Space Grotesk"', "system-ui", "sans-serif"],
         serif: ['"Source Serif 4"', "Georgia", "serif"],
+        bartle: ['"BBH Sans Bartle"', "sans-serif"],
+        oswald: ['"Oswald"', "sans-serif"],
+        ubuntu: ['"Ubuntu"', "sans-serif"],
+        "ubuntu-mono": ['"Ubuntu Mono"', "monospace"],
       },
       colors: {
         tue: "#C72125",

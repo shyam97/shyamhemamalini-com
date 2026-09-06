@@ -12,10 +12,12 @@ export default function Photography() {
   return (
     <div>
       <header className="max-w-3xl mx-auto px-6 pt-16 pb-12 text-center">
-        <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl tracking-tight text-stone-900 dark:text-white">
+        <h1 className="font-bartle text-4xl sm:text-5xl md:text-6xl tracking-tight text-sunflower-400">
           {RESUME_DATA.profile.name}
         </h1>
-        <p className="text-lg text-stone-500 dark:text-stone-400 mt-3">Hobbyist Photographer</p>
+        <p className="font-oswald text-lg text-stone-500 dark:text-stone-400 mt-3">
+          Hobbyist Photographer
+        </p>
         <a
           href={mailtoHref("Photography inquiry")}
           className="inline-flex items-center gap-1.5 text-sm text-stone-400 dark:text-stone-500 hover:text-sunflower-700 dark:hover:text-sunflower-400 transition-colors mt-2"
@@ -30,8 +32,9 @@ export default function Photography() {
             <PhotoTile key={photo.id} photo={photo} onClick={() => setActiveIndex(i)} />
           ))}
         </div>
+        <div className="absolute inset-0 bg-white/50 dark:bg-black/40 pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className="font-display font-bold text-3xl sm:text-4xl text-stone-900 dark:text-white bg-sunflower-50/80 dark:bg-[#18140a]/80 px-6 py-3 rounded-2xl">
+          <p className="font-oswald font-semibold text-3xl sm:text-4xl text-sunflower-400 dark:text-white">
             Coming soon...
           </p>
         </div>

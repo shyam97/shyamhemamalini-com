@@ -15,11 +15,11 @@ export default function CV() {
       {/* Header */}
       <header className="mb-14 flex flex-col-reverse md:flex-row items-start gap-8">
         <div className="flex-1">
-          <h1 className="text-3xl md:text-4xl font-normal tracking-tight text-stone-900 dark:text-white">
+          <h1 className="font-ubuntu text-3xl md:text-4xl font-normal tracking-tight text-stone-900 dark:text-white">
             {profile.name}
           </h1>
           <p className="text-lg text-stone-700 dark:text-stone-300 mt-2">{profile.title}</p>
-          <p className="font-mono text-xs text-stone-400 dark:text-stone-500 mt-1.5">
+          <p className="font-ubuntu-mono text-xs text-stone-400 dark:text-stone-500 mt-1.5">
             {profile.subtitle}
           </p>
 
