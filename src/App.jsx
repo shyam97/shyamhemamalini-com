@@ -1,8 +1,10 @@
+import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import CV from "./pages/CV";
-import Photography from "./pages/Photography";
+
+const CV = lazy(() => import("./pages/CV"));
+const Photography = lazy(() => import("./pages/Photography"));
 
 export default function App() {
   return (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Nav from "./Nav";
 import { RESUME_DATA } from "../data/resume";
@@ -53,7 +53,9 @@ export default function Layout() {
 
         <Nav theme={theme} onToggleTheme={toggleTheme} />
 
-        <Outlet />
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
 
         <footer className="max-w-5xl mx-auto px-6 py-8 mt-16 border-t border-stone-200 dark:border-stone-800 text-center text-xs font-mono text-stone-400 dark:text-stone-600">
           <p>
