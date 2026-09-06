@@ -1,44 +1,60 @@
 /**
- * CV content, transcribed from info/SSHemamalini_CV.tex.
+ * CV content. Synthesized from info/SSHemamalini_CV.tex plus several
+ * job-tailored resume variants, positioned toward scientific software
+ * development for CFD/thermal engineering while staying open to process
+ * engineering, physics modelling, R&D, and mechanical design roles.
  * Edit this file to update the site — no component code needs to change.
  */
 export const RESUME_DATA = {
   profile: {
     name: "Shyam Hemamalini",
-    title: "Computational Mechanical Engineer",
-    subtitle: "CFD · Flow & Thermal · Mechanical Design · Code Development",
+    title: "Scientific Software Engineer",
+    subtitle: "CFD · Thermal & Flow Engineering · Numerical Modelling · HPC",
     photo: "/profile2.jpg",
     github: "https://github.com/shyam97",
     linkedin: "https://linkedin.com/in/shyamhemamalini",
     unsplash: "https://unsplash.com/@thezenoeffect",
     nationality: "Nationality: Dutch",
-    availability: "Available immediately",
+    availability: "Availability: September 2026",
     cvPdf: "/Shyam_Hemamalini_CV.pdf",
   },
   summary:
-    "Highly skilled computational engineer and high-impact R&D engineer with a strong foundation in first-principles physics and extensive experience developing end-to-end mechanical, flow & thermal, and energy systems. A dedicated researcher with a distinct industrial outlook, adept at leveraging high-performance computing (HPC) alongside a robust suite of commercial and open-source software packages to drive product innovation from concept to validation across mechanical engineering.",
+    "A computational engineer specializing in scientific software development for fluid and thermal systems — designing, testing, and validating high-performance numerical solvers from first-principles physics through to production-quality, version-controlled code. Equally comfortable applying that same foundation to mechanical design, process engineering, and industrial R&D. Adept at owning a problem end-to-end: solver architecture, HPC implementation, data analysis, and clear technical communication.",
   expertise: [
     {
       label: "Research Interests",
       items: [
-        "Multiphysics Modelling & Simulation",
-        "High-Performance Computing",
-        "Mechanical Design & Control Systems",
+        "Scientific Software Development",
+        "CFD & Numerical Modelling",
+        "Thermal & Flow Engineering",
+        "Mechanical Design & R&D",
       ],
     },
-    { label: "Languages", items: ["Python", "Fortran", "MATLAB", "C/C++", "C#", "CUDA", "Bash"] },
+    {
+      label: "Languages",
+      items: ["Python", "Fortran", "MATLAB", "C/C++", "C#", "CUDA", "OpenMP", "Bash"],
+    },
     {
       label: "Tools",
       items: [
         "Ansys Fluent",
         "OpenFOAM",
+        "Ansys Workbench",
         "SolidWorks",
+        "Simulink",
         "Blender",
         "ParaView",
-        "Adobe Suite",
         "Git",
         "VS Code",
-        "Simulink",
+      ],
+    },
+    {
+      label: "Development Practices",
+      items: [
+        "Object-Oriented Design",
+        "Unit & Integration Testing",
+        "Agile/Scrum Workflows",
+        "Agentic Workflows",
       ],
     },
     {
@@ -49,20 +65,18 @@ export const RESUME_DATA = {
         "Species transport",
         "Chemically reacting flows",
         "Heat & mass transfer",
-        "Mechanical design",
-        "Solid dynamics",
       ],
     },
   ],
   timeline: [
     {
       id: "tue-phd",
-      role: "PhD Candidate in Mechanical Engineering",
+      role: "PhD in Mechanical Engineering",
       org: "Technische Universiteit Eindhoven",
       location: "Eindhoven, Netherlands",
-      period: "Jul 2022 — Jul 2026 (expected)",
+      period: "Jul 2022 — Aug 2026",
       shortDesc:
-        "Numerical investigations into why iron particles fail to burn — turbulence–iron powder combustion interaction.",
+        "Building and validating a hybrid multiphysics solver — DNS and LES — for turbulent iron powder combustion, developed as tested, version-controlled software with international collaborators.",
       meta: [
         {
           label: "Dissertation",
@@ -75,12 +89,23 @@ export const RESUME_DATA = {
         },
       ],
       details: [
-        "Developed a hybrid multiphysics solver for turbulent iron powder flame simulations with a high-fidelity Fortran DNS framework (NTMIX-CHEMKIN) and a custom-built C++ OpenFOAM LES solver using a four-way Euler–Lagrange approach.",
-        "Engineered a scalable Python post-processing framework with scipy, h5py, and pandas, optimizing memory management and parallel execution to handle 500GB+ datasets.",
-        "Designed and executed research-level simulations yielding analytical insights on flow–particle interactions in large-scale burners.",
-        "Submitted 5 papers to top journals (PROCI, CnF, Fuel), presented at over 10 conferences, and won the Best Poster Award at COMBURA 2024.",
+        "Designed and implemented a hybrid multiphysics solver — a high-fidelity Fortran DNS framework (NTMIX-CHEMKIN) and a custom object-oriented C++ OpenFOAM LES solver — using four-way Euler–Lagrange coupling and modular, testable code components.",
+        "Worked in an iterative, agile-style development cycle with international collaborators (CERFACS, France), maintaining code via Git version control and validating changes against reference simulations.",
+        "Designed and executed DNS/LES of turbulent iron powder flames across scales — Kolmogorov-scale forced HIT, mesoscale mixing layers, and lab-scale jet-in-hot-coflow burners — translating results into actionable conclusions for burner-scale operation.",
+        "Built a parallel Python post-processing and visualization framework for 500GB+ CFD datasets; published 5 papers, presented at 14 conferences and 2 invited seminar talks, and won the Best Poster Award at COMBURA 2024.",
       ],
-      keywords: ["C++", "Fortran", "OpenFOAM", "DNS", "LES", "Euler-Lagrange", "HPC", "Python"],
+      keywords: [
+        "C++",
+        "Fortran",
+        "OpenFOAM",
+        "DNS",
+        "LES",
+        "Euler-Lagrange",
+        "OOP",
+        "Git",
+        "HPC",
+        "Python",
+      ],
     },
     {
       id: "wur-ra",
@@ -89,13 +114,13 @@ export const RESUME_DATA = {
       location: "Wageningen, Netherlands",
       period: "Feb 2022 — Dec 2022",
       shortDesc:
-        "Modeled indoor airborne virus transmission dynamics to quantify COVID-19 infection risk.",
+        "Modelled indoor airborne virus transmission dynamics to translate CFD results into ventilation recommendations.",
       details: [
-        "Modeled transient indoor airborne virus transmission dynamics using Ansys Fluent to evaluate and quantify COVID-19 infection risks across various architectural scenarios.",
-        "Developed and implemented a custom User-Defined Function (UDF) plugin in C to simulate the multiphase, high-velocity fluid dynamics of human coughing and sneezing events.",
-        "Translated complex CFD data into actionable epidemiological insights, providing a quantitative framework to optimize indoor safety protocols and ventilation design.",
+        "Modelled transient multiphase airflow in Ansys Fluent to evaluate and quantify COVID-19 infection risk across architectural scenarios.",
+        "Developed a modular User-Defined Function (UDF) plugin in C for high-velocity, multiphase cough/sneeze flow physics.",
+        "Translated complex CFD data into actionable ventilation and indoor safety recommendations for non-technical stakeholders.",
       ],
-      keywords: ["Ansys Fluent", "C", "UDF", "Multiphase Flow", "Epidemiology"],
+      keywords: ["Ansys Fluent", "C", "UDF", "Multiphase Flow"],
     },
     {
       id: "tud-msc",
@@ -115,9 +140,8 @@ export const RESUME_DATA = {
         },
       ],
       details: [
-        "Developed a novel C/CUDA-based Lagrangian solver based on the Nernst–Planck equation to model multi-physics ionic flux, integrating it into the open-source multiphase solver Bluebottle.",
-        "Utilized high-performance parallelized computing to simulate electrokinetic transport in water electrolyzers, isolating the impact of gas bubble impedance on current density.",
-        "Performed rigorous validation against physical experimental data, proving the framework's efficacy as an industrial-grade predictive modeling tool.",
+        "Developed an object-oriented C/CUDA Lagrangian transport solver based on the Nernst–Planck equation, built from scratch and integrated into the open-source multiphase solver Bluebottle.",
+        "Used the tool to estimate current density in water electrolyzers where ionic flow is impeded by gas bubbles, validating predictions against experimental data.",
       ],
       keywords: ["C", "CUDA", "Nernst-Planck", "Electrokinetics", "HPC"],
     },
@@ -128,13 +152,12 @@ export const RESUME_DATA = {
       location: "Delft, Netherlands",
       period: "Aug 2020 — Oct 2020",
       shortDesc:
-        "Modeled multiphase liquid–gas flows through curved piping geometries in OpenFOAM and Ansys Fluent.",
+        "Modelled multiphase liquid–gas flows through curved piping geometries in OpenFOAM and Ansys Fluent.",
       details: [
-        "Modeled complex multiphase liquid-gas flows through flexible and curved piping geometries in OpenFOAM and Ansys Fluent; generated meshes optimized for boundary layer resolution and phase-interface tracking.",
-        "Developed automated MATLAB post-processing pipelines to analyze transient hydrodynamic force magnitudes and compute Power Spectral Density (PSD) data, identifying flow-induced vibration frequencies.",
-        "Validated CFD models against in-house experimental data, performing error-quantification and spectral analysis across varying pipe configurations.",
+        "Modelled multiphase liquid–gas flows through flexible and curved piping in OpenFOAM and Ansys Fluent.",
+        "Developed automated MATLAB post-processing pipelines, validating Power Spectral Density (PSD) and flow-induced vibration results against in-house experiments.",
       ],
-      keywords: ["OpenFOAM", "Ansys Fluent", "MATLAB", "PSD", "Multiphase Flow"],
+      keywords: ["OpenFOAM", "Ansys Fluent", "MATLAB", "PSD"],
     },
     {
       id: "psg-jrf",
@@ -147,7 +170,7 @@ export const RESUME_DATA = {
       details: [
         "Developed analytical multiphysics models from first principles to simulate closed-loop thermosiphon cooling, balancing buoyancy against viscous resistance.",
         "Built an iterative transient simulation model with 30-second time-step discretization to map daily solar irradiance profiles and quantify cumulative energy losses.",
-        "Engineered and optimized a parallel-plate fin heat sink manifold using SolidWorks, applying Teertstra's analytical equations to achieve 98.5% fin efficiency.",
+        "Engineered and optimized a parallel-plate fin heat sink manifold in SolidWorks, achieving 98.5% fin efficiency and validating the design experimentally.",
       ],
       keywords: ["SolidWorks", "Thermal Design", "Natural Convection", "MATLAB"],
     },
@@ -168,7 +191,7 @@ export const RESUME_DATA = {
       details: [
         "Geometrically optimized and fabricated a novel Y-frame folding bicycle, formulating a multivariate non-linear objective function to establish an optimal 72° head angle.",
         "Developed 3D CAD models and executed structural finite element analysis (FEA), validating full-vehicle integrity under 120 kg loads with factors of safety of 2–3.",
-        "Engineered custom hardware mechanisms, including telescoping forks and notch-key sliding locks, validated through real-time endurance testing.",
+        "Designed and simulated a naturally-convected passive cooling mechanism for photovoltaic panels in Ansys Fluent.",
       ],
       keywords: ["SolidWorks", "FEA", "Structural Design", "Optimization"],
     },
@@ -198,7 +221,7 @@ export const RESUME_DATA = {
       details: [
         "Designed, assembled, and programmed an autonomous line-following and waste-sorting robot for an IIT Bombay national competition.",
         "Developed embedded firmware in C# for ATmega microcontrollers, establishing low-level control loops for sensor processing and servo actuation.",
-        "Utilized MATLAB/Simulink to model robot arm movements and grip control prior to hardware deployment.",
+        "Used MATLAB/Simulink to model robot arm movements and grip control prior to hardware deployment.",
       ],
       keywords: ["C#", "Embedded Systems", "MATLAB", "Simulink", "Robotics"],
     },
