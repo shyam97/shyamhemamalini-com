@@ -31,14 +31,14 @@ export default {
           "0%, 100%": { opacity: "0", transform: "translate(0em, 0em)" },
           "40%": {
             opacity: "0.6",
-            transform: "translate(calc(var(--gx, 1) * 0.1em), calc(var(--gy, 0) * 0.1em))",
+            transform: "translate(calc(var(--gx, 1) * 0.15em), calc(var(--gy, 0) * 0.15em))",
           },
         },
         chromaYellow: {
           "0%, 100%": { opacity: "0", transform: "translate(0em, 0em)" },
           "40%": {
             opacity: "0.6",
-            transform: "translate(calc(var(--gx, 1) * -0.1em), calc(var(--gy, 0) * -0.1em))",
+            transform: "translate(calc(var(--gx, 1) * -0.15em), calc(var(--gy, 0) * -0.15em))",
           },
         },
       },
