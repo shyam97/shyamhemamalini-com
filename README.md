@@ -47,3 +47,10 @@ Node ≥20.19 (see `.nvmrc`) — required by Vite 7.
 ## Deployment
 
 Static build (`dist/`) deployed via Cloudflare Pages, connected to this repo's `main` branch.
+
+---
+
+[![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-D97757?style=flat-square)](https://claude.com)
+
+Built with Claude Sonnet 5 — Anthropic's model, January 2026 knowledge, infinite patience for revisions.
+
