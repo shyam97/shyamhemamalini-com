@@ -62,7 +62,7 @@ export default function Layout() {
             © {new Date().getFullYear()} {RESUME_DATA.profile.name}
           </p>
           <p className="mt-1 text-stone-300 dark:text-stone-700">
-            Made with Claude and Tailwind
+            Made with Claude, Tailwind, and Vite
           </p>
         </footer>
       </div>
