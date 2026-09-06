@@ -1,0 +1,111 @@
+/**
+ * Project showcase for the landing page. `background` currently points to
+ * a random placeholder image — swap each for a real project image/animation
+ * when ready, no component code needs to change. `cvAnchor` matches an `id`
+ * in data/resume.js's `timeline` array, so the card links to that entry on
+ * the CV page. `pinned` entries always render first, ahead of the
+ * year-sorted rest.
+ */
+export const PROJECTS = [
+  {
+    id: "whats-next",
+    pinned: true,
+    category: "What's next?",
+    title: "Searching for my next project...",
+    period: "2026",
+    description:
+      "Looking for suitable roles in the industry. Contact me if you have something interesting!",
+    keywords: [],
+    background: "/projects/opentowork.jpg",
+  },
+  {
+    id: "dns-hit",
+    category: "PhD Research",
+    title: "Iron Powder Combustion in HIT",
+    period: "2025",
+    description: "Preferential concentration in homogeneous isotropic turbulence.",
+    keywords: ["DNS", "HIT", "Preferential Concentration"],
+    cvAnchor: "tue-phd",
+    background: "/projects/dnshit_small.jpg",
+  },
+  {
+    id: "dns-mixing-layer",
+    category: "PhD Research",
+    title: "Iron Powder Combustion in Mixing Layers",
+    period: "2024",
+    description: "Ignition delay and flame structure in a turbulent mixing layer.",
+    keywords: ["DNS", "Mixing Layer"],
+    cvAnchor: "tue-phd",
+    background: "https://picsum.photos/seed/proj-mixing-layer/800/800",
+  },
+  {
+    id: "jhc-burner",
+    category: "PhD Research",
+    title: "Iron Powder Combustion in a JHC Burner",
+    period: "2026",
+    description: "LES of iron-powder combustion at burner scale.",
+    keywords: ["LES", "OpenFOAM"],
+    cvAnchor: "tue-phd",
+    background: "/projects/jhcburner.jpg",
+  },
+  {
+    id: "ignition-spherical",
+    category: "PhD Research",
+    title: "Iron Cloud Ignition in Suspensions",
+    period: "2026",
+    description: "Particle clustering effects on early flame development.",
+    keywords: ["Ignition", "DNS"],
+    cvAnchor: "tue-phd",
+    background: "/projects/ignition_small.jpg",
+  },
+  {
+    id: "wageningen-airflow",
+    category: "Research Assistant",
+    title: "Airborne Virus Transmission Modelling",
+    period: "2022",
+    description: "CFD-based indoor infection risk from coughing and sneezing.",
+    keywords: ["Ansys Fluent", "UDF"],
+    cvAnchor: "wur-ra",
+    background: "/projects/covidventilation.jpg",
+  },
+  {
+    id: "msc-thesis",
+    category: "MSc Thesis",
+    title: "Lagrangian Passive Scalar Solver",
+    period: "2021",
+    description: "CUDA solver for ionic transport in water electrolyzers.",
+    keywords: ["CUDA", "Bluebottle"],
+    cvAnchor: "tud-msc",
+    background: "/projects/masterthesis.jpg",
+  },
+  {
+    id: "psg-thermosiphon",
+    category: "Research Assistant",
+    title: "Thermosiphon & Solar Module Modelling",
+    period: "2019",
+    description: "Analytical models for pump-free cooling and solar heat loss.",
+    keywords: ["Thermosiphon", "SolidWorks"],
+    cvAnchor: "psg-jrf",
+    background: "https://picsum.photos/seed/proj-thermosiphon/800/800",
+  },
+  {
+    id: "folding-bicycle",
+    category: "Bachelor End Project",
+    title: "Foldable Portable Cycle",
+    period: "2018",
+    description: "Y-frame folding bicycle, optimized and FEA-validated.",
+    keywords: ["SolidWorks", "FEA"],
+    cvAnchor: "cit-beng",
+    background: "/projects/foldablebike.jpg",
+  },
+  {
+    id: "baja-sae",
+    category: "Design Project",
+    title: "BAJA SAE Racing Vehicle",
+    period: "2017",
+    description: "Roll cage design and FEA for an all-terrain vehicle.",
+    keywords: ["Ansys Workbench", "Vehicle Design"],
+    cvAnchor: "baja-design",
+    background: "/projects/baja_assembly.jpg",
+  },
+];
