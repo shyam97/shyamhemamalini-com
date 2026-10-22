@@ -19,7 +19,7 @@ export const RESUME_DATA = {
     unsplash: "https://unsplash.com/@thezenoeffect",
     nationality: "Dutch",
     availability: "September 2026",
-    cvPdf: "/Shyam_Hemamalini_CV.pdf",
+    cvPdf: "/SSHemamalini_CV.pdf",
   },
   // Array of paragraphs (rendered with a gap between each), not one block.
   summary: [
