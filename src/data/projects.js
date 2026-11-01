@@ -117,7 +117,7 @@ export const PROJECTS = [
     period: "2017",
     description: "Roll cage design and FEA for an all-terrain vehicle.",
     keywords: ["Ansys Workbench", "Vehicle Design"],
-    cvAnchor: "baja-design",
+    cvAnchor: "cit-beng",
     background: "/projects/baja_assembly.jpg",
   },
 ];

@@ -49,19 +49,23 @@ function GlitchName({ text, className = "", playKey }) {
 }
 
 const ABOUT_ITEMS = [
-  "Computational physics engineer",
-  "Finishing a PhD at TU/e on turbulent iron powder combustion",
   <>
-    Interested in <span className="text-tue">R&amp;D</span>,{" "}
-    <span className="text-tue">CFD</span>,{" "}
-    <span className="text-tue">scientific software development</span>, and{" "}
-    <span className="text-tue">thermal &amp; flow engineering</span> roles
+    Computational engineer in <span className="text-tue">Python</span>,{" "}
+    <span className="text-tue">Fortran</span> and <span className="text-tue">C++</span>
+  </>,
+  "PhD from TU/e on numerical modelling of turbulent iron powder combustion",
+  "4 publications and 16 conference presentations",
+  <>
+    Looking for <span className="text-tue">energy transition</span> roles building{" "}
+    <span className="text-tue">numerical tools</span> and{" "}
+    <span className="text-tue">software solutions</span>
   </>,
   <>
     Hobbyist <span className="text-sunflower-400">photographer</span>
   </>,
   <>
-    Tinkering with <span className="text-green-500">home networks</span> on the side
+    Tinkering with <span className="text-green-500">homelabs</span>, web dev and procedural
+    art on the side
   </>,
 ];
 

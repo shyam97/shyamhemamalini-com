@@ -1,58 +1,74 @@
 /**
- * CV content. Synthesized from info/SSHemamalini_CV.tex plus several
- * job-tailored resume variants, positioned toward scientific software
- * development for CFD/thermal engineering while staying open to process
- * engineering, physics modelling, R&D, and mechanical design roles.
+ * CV content. Mirrors public/SSHemamalini_CV.pdf (wording, structure and
+ * positioning toward computational engineering for the energy transition),
+ * plus web-only extras such as advisors, links and per-entry keywords.
  * Edit this file to update the site — no component code needs to change.
  */
 export const RESUME_DATA = {
   profile: {
     name: "Shyam Hemamalini",
-    title: "Scientific Software Engineer",
+    title: "Computational Engineer",
     // Rendered as two fixed lines (not wrapped at whatever point the
     // viewport happens to break it), so this is an array of lines, not
     // a single string.
-    subtitle: ["CFD · Thermal & Flow Engineering", "Multiphysics Modelling · HPC"],
+    subtitle: ["Energy & Heat Modelling", "Python · Fortran · C++"],
     photo: "/profile2.jpg",
     github: "https://github.com/shyam97",
     linkedin: "https://linkedin.com/in/shyamhemamalini",
     unsplash: "https://unsplash.com/@thezenoeffect",
     nationality: "Dutch",
-    availability: "Immediately",
+    availability: "November 2026",
     cvPdf: "/SSHemamalini_CV.pdf",
   },
   // Array of paragraphs (rendered with a gap between each), not one block.
   summary: [
-    "A computational engineer specializing in scientific software development for fluid and thermal systems — designing, testing, and validating high-performance numerical solvers from first-principles physics through to production-quality, version-controlled code. Equally comfortable applying that same foundation to mechanical design, process engineering, and industrial R&D.",
-    "Adept at owning a problem end-to-end: solver architecture, HPC implementation, data analysis, and technical communication. Expert in scientific visualization for CFD, mechanical design, software architecture, and multiphysics modelling.",
-    "Passionate about open-source software, reproducible research, and collaborative development.",
+    "A computational engineer well-versed in Python, Fortran and C++, with a PhD in Mechanical Engineering from TU Eindhoven focused on numerical modelling of turbulent combustion of iron particles.",
+    "Experienced in scientific communication and reporting, with 4 publications and 16 conference presentations. Passionate about programming in general, with hobbyist projects in homelabs, web dev and procedural art.",
+    "Looking for a role catering to the energy transition, with a focus on building numerical tools and software solutions.",
   ],
   expertise: [
     {
-      label: "Research Interests",
+      label: "Python Stack",
+      items: ["NumPy", "SciPy", "pandas", "Polars", "Matplotlib", "h5py (HDF5)", "Jupyter"],
+    },
+    {
+      label: "Modelling & Analysis",
       items: [
-        "Scientific Software Development",
-        "CFD & Numerical Modelling",
-        "Thermal & Flow Engineering",
-        "Mechanical Design & R&D",
+        "Heat & mass transfer",
+        "Time series analysis",
+        "Scenario & sensitivity analysis",
+        "Model validation",
+      ],
+    },
+    {
+      label: "Scientific Computing",
+      items: [
+        "Numerical methods",
+        "HPC",
+        "Parallelization",
+        "Data visualization",
+        "Science communication",
       ],
     },
     {
       label: "Languages",
-      items: ["Python", "Fortran", "MATLAB", "C/C++", "C#", "CUDA", "OpenMP", "Bash"],
+      items: ["Python", "HTML/CSS", "Fortran", "C/C++", "C#", "MATLAB", "CUDA", "OpenMP", "Bash"],
     },
     {
       label: "Tools",
       items: [
-        "Ansys Fluent",
+        "Git",
+        "Linux",
+        "VS Code",
+        "Excel",
+        "Agentic workflows",
         "OpenFOAM",
+        "Ansys Fluent",
         "Ansys Workbench",
         "SolidWorks",
         "Simulink",
         "Blender",
         "ParaView",
-        "Git",
-        "VS Code",
       ],
     },
     {
@@ -83,7 +99,7 @@ export const RESUME_DATA = {
       location: "Eindhoven, Netherlands",
       period: "Jul 2022 — Oct 2026",
       shortDesc:
-        "Building and validating a hybrid multiphysics solver — DNS and LES — for turbulent iron powder combustion, developed as tested, version-controlled software with international collaborators.",
+        "Developed one of the first numerical frameworks, built with Python, Fortran and C++, to simulate turbulent iron powder combustion.",
       meta: [
         {
           label: "Dissertation",
@@ -96,23 +112,13 @@ export const RESUME_DATA = {
         },
       ],
       details: [
-        "Designed and implemented a hybrid multiphysics solver — a high-fidelity Fortran DNS framework (NTMIX-CHEMKIN) and a custom object-oriented C++ OpenFOAM LES solver — using four-way Euler–Lagrange coupling and modular, testable code components.",
-        "Worked in an iterative, agile-style development cycle with international collaborators (CERFACS, France), maintaining code via Git version control and validating changes against reference simulations.",
-        "Designed and executed DNS/LES of turbulent iron powder flames across scales — Kolmogorov-scale forced HIT, mesoscale mixing layers, and lab-scale jet-in-hot-coflow burners — translating results into actionable conclusions for burner-scale operation.",
-        "Built a parallel Python post-processing and visualization framework for 500GB+ CFD datasets; published 5 papers, presented at 14 conferences and 2 invited seminar talks, and won the Best Poster Award at COMBURA 2024.",
+        "Developed one of the first numerical frameworks built with Python, Fortran and C++ to simulate turbulent iron powder combustion.",
+        "Designed and executed simulations at a range of different scales and flow complexities, the results of which are well-cited in the research community.",
+        "Kept the code modular and version-controlled with an Agile-like development process.",
+        "Built a custom, parallel Python post-processing workflow to extract and analyze 500GB+ of output.",
+        "Communicated findings across 16 conferences, gave 2 invited talks to audiences outside the immediate research group, and won the Best Poster Award at COMBURA 2024.",
       ],
-      keywords: [
-        "C++",
-        "Fortran",
-        "OpenFOAM",
-        "DNS",
-        "LES",
-        "Euler-Lagrange",
-        "OOP",
-        "Git",
-        "HPC",
-        "Python",
-      ],
+      keywords: ["Python", "Fortran", "C++", "OpenFOAM", "DNS", "LES", "HPC", "Git"],
     },
     {
       id: "wur-ra",
@@ -121,11 +127,11 @@ export const RESUME_DATA = {
       location: "Wageningen, Netherlands",
       period: "Feb 2022 — Dec 2022",
       shortDesc:
-        "Modelled indoor airborne virus transmission dynamics to translate CFD results into ventilation recommendations.",
+        "Simulated indoor COVID-19 transmission to inform ventilation recommendations.",
       details: [
-        "Modelled transient multiphase airflow in Ansys Fluent to evaluate and quantify COVID-19 infection risk across architectural scenarios.",
-        "Developed a modular User-Defined Function (UDF) plugin in C for high-velocity, multiphase cough/sneeze flow physics.",
-        "Translated complex CFD data into actionable ventilation and indoor safety recommendations for non-technical stakeholders.",
+        "Simulated indoor COVID-19 transmission in Ansys Fluent, modelling turbulent airflow and particle transport in multiple configurations.",
+        "Extended Ansys Fluent's solver with a custom, documented C UDF for the flow physics the standard models did not cover.",
+        "Communicated findings on ventilation recommendations to non-technical stakeholders at the university.",
       ],
       keywords: ["Ansys Fluent", "C", "UDF", "Multiphase Flow"],
     },
@@ -136,9 +142,9 @@ export const RESUME_DATA = {
       location: "Delft, Netherlands",
       period: "Aug 2019 — Dec 2021",
       shortDesc:
-        "Specialization in Energy, Flow, and Process Engineering; thesis on a Lagrangian passive scalar solver.",
+        "Specialization in Energy, Flow and Process; thesis on a Lagrangian passive scalar solver.",
       meta: [
-        { label: "Specialization", value: "Energy, Flow, and Process Engineering" },
+        { label: "Specialization", value: "Energy, Flow and Process" },
         {
           label: "Thesis",
           value:
@@ -147,10 +153,11 @@ export const RESUME_DATA = {
         },
       ],
       details: [
-        "Developed an object-oriented C/CUDA Lagrangian transport solver based on the Nernst–Planck equation, built from scratch and integrated into the open-source multiphase solver Bluebottle.",
-        "Used the tool to estimate current density in water electrolyzers where ionic flow is impeded by gas bubbles, validating predictions against experimental data.",
+        "Master thesis: developed a novel C/CUDA/Python quantitative transport model, integrated it into Bluebottle, and validated predictions against experimental data.",
+        "Focus on computational engineering for energy and flow & thermal (F&T) systems, with coursework in thermodynamics, heat and mass transfer, multiphase flow and numerical analysis.",
+        "Teaching Assistant for the edX MOOC Technology for Intelligent and Integrated Energy Systems (2021–2023).",
       ],
-      keywords: ["C", "CUDA", "Nernst-Planck", "Electrokinetics", "HPC"],
+      keywords: ["C", "CUDA", "Python", "Electrokinetics", "HPC"],
     },
     {
       id: "tno-intern",
@@ -159,12 +166,12 @@ export const RESUME_DATA = {
       location: "Delft, Netherlands",
       period: "Aug 2020 — Oct 2020",
       shortDesc:
-        "Modelled multiphase liquid–gas flows through curved piping geometries in OpenFOAM and Ansys Fluent.",
+        "Modelled multiphase liquid–gas flow and flow-induced vibration in flexible piping.",
       details: [
-        "Modelled multiphase liquid–gas flows through flexible and curved piping in OpenFOAM and Ansys Fluent.",
-        "Developed automated MATLAB post-processing pipelines, validating Power Spectral Density (PSD) and flow-induced vibration results against in-house experiments.",
+        "Modelled multiphase liquid–gas flow and flow-induced vibration in flexible piping.",
+        "Built automated MATLAB pipelines for spectral (PSD) analysis of the time-series data, validated against in-house experiments.",
       ],
-      keywords: ["OpenFOAM", "Ansys Fluent", "MATLAB", "PSD"],
+      keywords: ["Multiphase Flow", "MATLAB", "PSD", "Time Series"],
     },
     {
       id: "psg-jrf",
@@ -173,11 +180,12 @@ export const RESUME_DATA = {
       location: "Coimbatore, India",
       period: "Jul 2018 — Jun 2019",
       shortDesc:
-        "First-principles models for closed-loop thermosiphon cooling and solar module heat losses.",
+        "First-principles models for closed-loop thermosiphon cooling, solar module heat losses and heat-sink natural convection.",
       details: [
         "Developed analytical multiphysics models from first principles to simulate closed-loop thermosiphon cooling, balancing buoyancy against viscous resistance.",
         "Built an iterative transient simulation model with 30-second time-step discretization to map daily solar irradiance profiles and quantify cumulative energy losses.",
-        "Engineered and optimized a parallel-plate fin heat sink manifold in SolidWorks, achieving 98.5% fin efficiency and validating the design experimentally.",
+        "Developed transient natural-convection models for a heat-sink manifold designed in SolidWorks.",
+        "Optimized the design to 98.5% fin efficiency and validated it experimentally.",
       ],
       keywords: ["SolidWorks", "Thermal Design", "Natural Convection", "MATLAB"],
     },
@@ -188,7 +196,7 @@ export const RESUME_DATA = {
       location: "Coimbatore, India",
       period: "Aug 2014 — May 2018",
       shortDesc:
-        "End project: fabrication of a foldable portable cycle for optimized frame design.",
+        "End-of-degree project on a geometrically optimized Y-frame folding bicycle; BAJA SAE India and eYantra robotics.",
       meta: [
         {
           label: "Specialization",
@@ -196,41 +204,14 @@ export const RESUME_DATA = {
         },
       ],
       details: [
-        "Geometrically optimized and fabricated a novel Y-frame folding bicycle, formulating a multivariate non-linear objective function to establish an optimal 72° head angle.",
-        "Developed 3D CAD models and executed structural finite element analysis (FEA), validating full-vehicle integrity under 120 kg loads with factors of safety of 2–3.",
+        "End-of-degree project: geometrically optimized and fabricated a novel Y-frame folding bicycle, using nonlinear optimization and structural FEA to validate full-vehicle integrity under extreme loads.",
+        "Led CAD/FEA structural validation of an all-terrain vehicle roll cage as Design Engineer, BAJA SAE India.",
         "Designed and simulated a naturally-convected passive cooling mechanism for photovoltaic panels in Ansys Fluent.",
-      ],
-      keywords: ["SolidWorks", "FEA", "Structural Design", "Optimization"],
-    },
-    {
-      id: "baja-design",
-      role: "Design Engineer",
-      org: "Team Drifting Dragons",
-      location: "Coimbatore, India",
-      period: "May 2016 — Feb 2017",
-      shortDesc:
-        "Led the design department for a BAJA SAE India all-terrain racing vehicle.",
-      details: [
-        "Led the design department for a multidisciplinary BAJA SAE India team, overseeing CAD engineering, full-vehicle system integration, and assembly of an all-terrain racing vehicle.",
-        "Engineered and optimized the structural roll cage using SolidWorks, ensuring driver safety and seamless tolerance stack-up during assembly.",
-        "Executed structural solid dynamics simulations (FEA) in Ansys Workbench, conducting static, impact, and torsional stiffness analyses.",
-      ],
-      keywords: ["SolidWorks", "Ansys Workbench", "FEA", "Vehicle Design"],
-    },
-    {
-      id: "eyantra",
-      role: "Participant, eYantra Robotics Competition",
-      org: "Coimbatore Institute of Technology",
-      location: "Coimbatore, India",
-      period: "Jun 2015 — Apr 2016",
-      shortDesc:
-        "Designed and programmed an autonomous line-following and waste-sorting robot.",
-      details: [
-        "Designed, assembled, and programmed an autonomous line-following and waste-sorting robot for an IIT Bombay national competition.",
+        "Designed, assembled, and programmed an autonomous line-following and waste-sorting robot with a PID-controlled pick-and-place arm for the eYantra Robotics Competition (IIT Bombay).",
         "Developed embedded firmware in C# for ATmega microcontrollers, establishing low-level control loops for sensor processing and servo actuation.",
         "Used MATLAB/Simulink to model robot arm movements and grip control prior to hardware deployment.",
       ],
-      keywords: ["C#", "Embedded Systems", "MATLAB", "Simulink", "Robotics"],
+      keywords: ["SolidWorks", "FEA", "Optimization", "Ansys Workbench", "Ansys Fluent", "Robotics", "Simulink"],
     },
   ],
   publications: [
@@ -247,8 +228,10 @@ export const RESUME_DATA = {
       title:
         "LES of iron-powder combustion in a jet-in-hot-coflow burner — Insights on flame structure and ignition characteristics",
       authors: "Shyam Hemamalini, XiaoCheng Mi",
-      venue: "Proc. Combustion Symposium (accepted)",
+      venue: "Proc. Combustion Symposium",
       year: "2026",
+      href: "https://arxiv.org/abs/2608.28294",
+      hrefLabel: "Preprint: arXiv:2608.28294",
     },
     {
       id: "pub3",
@@ -265,9 +248,9 @@ export const RESUME_DATA = {
       title: "A theoretical analysis of timescales in preferential concentration of burning iron particles",
       authors: "Shyam Hemamalini, Bénédicte Cuenot, XiaoCheng Mi",
       venue: "Fuel — Short Communication (in review)",
-      year: "2026",
+      year: "2025",
       href: "https://dx.doi.org/10.2139/ssrn.5138232",
-      hrefLabel: "Preprint DOI:10.2139/ssrn.5138232",
+      hrefLabel: "Preprint: DOI:10.2139/ssrn.5138232",
     },
     {
       id: "pub5",
@@ -284,8 +267,8 @@ export const RESUME_DATA = {
     {
       id: "event-photographer",
       role: "Event Photographer",
-      context: "Part-time photographer for official and unofficial events",
-      period: "Ongoing",
+      context: "Part-time professional photographer for various events at TU/e and outside",
+      period: "2021 — Present",
     },
     {
       id: "ta1",
@@ -309,9 +292,9 @@ export const RESUME_DATA = {
   ],
   languagesSpoken: [
     { language: "English", level: "Fluent" },
-    { language: "Dutch", level: "A2+" },
-    { language: "German", level: "A2" },
-    { language: "French", level: "Beginner" },
+    { language: "Dutch", level: "Intermediate (A2+)" },
+    { language: "German", level: "Intermediate (A2)" },
+    { language: "French", level: "Beginner (A1)" },
     { language: "Tamil", level: "Native" },
   ],
 };
