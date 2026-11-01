@@ -3,7 +3,8 @@
  * a random placeholder image — swap each for a real project image/animation
  * when ready, no component code needs to change. `cvAnchor` matches an `id`
  * in data/resume.js's `timeline` array, so the card links to that entry on
- * the CV page. `pinned` entries always render first, ahead of the
+ * the CV page. `href` instead links the card to an external site, with
+ * `repo` adding a source-code link. `pinned` entries always render first, ahead of the
  * year-sorted rest.
  */
 export const PROJECTS = [
@@ -17,6 +18,17 @@ export const PROJECTS = [
       "Looking for suitable roles in the industry. Contact me if you have something interesting!",
     keywords: [],
     background: "/projects/opentowork.jpg",
+  },
+  {
+    id: "pebbleplot",
+    category: "Side Project",
+    title: "pebbleplot",
+    period: "2026",
+    description: "Interactive plotter for Fourier-perturbed pebble shapes and their shape descriptors.",
+    keywords: ["JavaScript", "SVG", "Shape Analysis"],
+    href: "https://pebbleplot.pages.dev",
+    repo: "https://github.com/shyam97/pebbleplot",
+    background: "/projects/pebbleplot.svg",
   },
   {
     id: "dns-hit",
