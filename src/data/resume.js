@@ -1,17 +1,17 @@
 /**
- * CV content. Mirrors public/SSHemamalini_CV.pdf (wording, structure and
- * positioning toward computational engineering for the energy transition),
+ * CV content. Mirrors public/SSHemamalini_CV.pdf (wording and structure),
+ * positioned toward building physics-based simulation software and data analysis models,
  * plus web-only extras such as advisors, links and per-entry keywords.
  * Edit this file to update the site — no component code needs to change.
  */
 export const RESUME_DATA = {
   profile: {
     name: "Shyam Hemamalini",
-    title: "Computational Engineer",
+    title: "Scientific Software Engineer",
     // Rendered as two fixed lines (not wrapped at whatever point the
     // viewport happens to break it), so this is an array of lines, not
     // a single string.
-    subtitle: ["Energy & Heat Modelling", "Python · Fortran · C++"],
+    subtitle: ["Physics-Based Simulation Software", "Data Analysis · CFD · HPC"],
     photo: "/profile2.jpg",
     github: "https://github.com/shyam97",
     linkedin: "https://linkedin.com/in/shyamhemamalini",
@@ -22,11 +22,21 @@ export const RESUME_DATA = {
   },
   // Array of paragraphs (rendered with a gap between each), not one block.
   summary: [
-    "A computational engineer well-versed in Python, Fortran and C++, with a PhD in Mechanical Engineering from TU Eindhoven focused on numerical modelling of turbulent combustion of iron particles.",
-    "Experienced in scientific communication and reporting, with 4 publications and 16 conference presentations. Passionate about programming in general, with hobbyist projects in homelabs, web dev and procedural art.",
-    "Looking for a role catering to the energy transition, with a focus on building numerical tools and software solutions.",
+    "A computational engineer specializing in building physics-based simulation software and data analysis models — designing, testing, and validating high-performance numerical solvers from first-principles physics through to production-quality, version-controlled code in Python, Fortran and C++. Equally comfortable applying that same foundation to mechanical design, process engineering, and industrial R&D.",
+    "Adept at owning a problem end-to-end: solver architecture, HPC implementation, data analysis, and technical communication. Expert in scientific visualization for CFD, mechanical design, software architecture, and multiphysics modelling.",
+    "Passionate about open-source software, reproducible research, and collaborative development.",
   ],
   expertise: [
+    {
+      label: "Research Interests",
+      items: [
+        "Physics-Based Simulation Software",
+        "Data Analysis Models",
+        "CFD & Numerical Modelling",
+        "Thermal & Flow Engineering",
+        "Mechanical Design & R&D",
+      ],
+    },
     {
       label: "Python Stack",
       items: ["NumPy", "SciPy", "pandas", "Polars", "Matplotlib", "h5py (HDF5)", "Jupyter"],
